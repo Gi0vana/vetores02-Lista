@@ -20,39 +20,23 @@ public class exerc01 {
         
         do {
         
-        System.out.println("Quantos números irá digitar?");
+         Scanner sc = new Scanner(System.in);
+        System.out.println("Qual será o tamanho do vetor?");
         int tamanho = sc.nextInt();
-        
-        int vetA []= new int [tamanho];
-            
-        for (int i = 0; i < vetA.length; i++){
-        System.out.println("Indique o valor do vetor A na posição["+i+"]:");
-        vetA[i]= sc.nextInt();
+
+        int vetA[] = new int[tamanho];
+
+        for (int i = 0; i < vetA.length; i++) {
+            System.out.println("Insira o valor do vetor na posição[" + i + "]:");
+            vetA[i] = sc.nextInt();
+
         }
-            System.out.println("Números digitados:");
-        for (int i = 0; i < vetA.length; i++){
-            System.out.println("Numéro:"+vetA[i]);
-        }
-            System.out.println();
-            System.out.println("Números impares:");
-        for (int i = 0; i < vetA.length; i++){
-            
-            if ((vetA[i]%2)!=0){
-                System.out.println("Ímpar :"+vetA[i]);
-            }}
-        
-            System.out.println("Deseja executar o programa novamente? (S)im/ (N)ão");
-            char resp = sc.next().charAt(0);
-            System.out.println();
-            
-            if (resp == 's'){
-                
-                flag = true;
-                
-            }else if (resp == 'n') {
-                flag = false;
+
+        System.out.println("NÚMEROS NEGATIVOS");
+        for (int i = 0; i < vetA.length; i++) {
+            if (vetA[i] < 0) {
+                System.out.println(vetA[i]);
             }
-        }while (flag == true);
     }
     
 }
